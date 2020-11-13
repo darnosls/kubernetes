@@ -1,0 +1,21 @@
+{
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#c566ff",
+        "activityBar.activeBorder": "#ffcf80",
+        "activityBar.background": "#c566ff",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#ffcf80",
+        "activityBarBadge.foreground": "#15202b",
+        "statusBar.background": "#b233ff",
+        "statusBar.foreground": "#e7e7e7",
+        "statusBarItem.hoverBackground": "#c566ff",
+        "titleBar.activeBackground": "#b233ff",
+        "titleBar.activeForeground": "#e7e7e7",
+        "titleBar.inactiveBackground": "#b233ff99",
+        "titleBar.inactiveForeground": "#e7e7e799"
+    },
+    "peacock.color": "#b233ff",
+    "python.pythonPath": "/home/darnos/.pyenv/versions/testes/bin/python",
+    "python.linting.enabled": true
+}

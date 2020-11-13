@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: external-api-deployment
+  labels:
+    app: external-api
+    tier: web
+spec:
+  selector:
+    matchLabels:
+      app: external-api
+      tier: web
+  template:
+    metadata:
+      labels:
+        app: external-api
+        tier: web
+    spec:
+      containers:
+        - name: external-api
+          image: darnosls/external_api:latest
+          ports:
+            - containerPort: 8000
+          env:
+            - name: SERVICE_URL
+              value: http://service-internal-api
+          livenessProbe:
+            exec:
+              command:
+              - cat
+            initialDelaySeconds: 5
+            periodSeconds: 5
+  replicas: 1

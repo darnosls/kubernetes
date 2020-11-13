@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  web:
+    image: darnos/external_api
+    build:
+      context: .
+    volumes:
+      - ./app:/var/external_api/app

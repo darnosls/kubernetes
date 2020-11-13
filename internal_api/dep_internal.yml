@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: internal-api-deployment
+  labels:
+    app: internal-api
+    tier: web
+spec:
+  selector:
+    matchLabels:
+      app: internal-api
+      tier: web
+  template:
+    metadata:
+      labels:
+        app: internal-api
+        tier: web
+    spec:
+      containers:
+        - name: internal-api
+          image: darnosls/internal_api:latest
+          ports:
+            - containerPort: 8000
+          livenessProbe:
+            exec:
+              command:
+              - cat
+            initialDelaySeconds: 5
+            periodSeconds: 5
+  replicas: 1
